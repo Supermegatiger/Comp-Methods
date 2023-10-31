@@ -62,12 +62,18 @@ A = np.array([[12.14, 1.32, -0.78, -2.75],
 
 b = np.array([14.78, -12.14, -11.65, 4.26],dtype=float)
 
+
+
+
 n = len(b)
 # начальные приближения
 x_0 = np.zeros(n,dtype=float) # нули
+x_0 = np.array(n*[1],dtype=float) # нули
 # x_0 = np.random.rand(n) # рандомные числа
 print(f'Начальные приближения:\n{x_0}')
 jacobi(A,b)
 seidel(A,b)
 plt.legend(['Метод Якоби', 'Метод Зейделя'])
 plt.show()
+
+
