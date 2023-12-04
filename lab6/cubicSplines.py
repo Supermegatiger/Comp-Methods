@@ -18,26 +18,7 @@ for n in [5,10,15]:
     yint = scipy.interpolate.CubicSpline(t, y)
 
     plt.plot(t, y, 'o')
-    plt.plot(x, yint(x), '-x',label=f'{n}')
+    plt.plot(x, yint(x), '-',label=f'{n}')
 plt.legend()
 plt.show()
 
-
-
-
-
-# import numpy as np
-# from scipy.interpolate import lagrange
-# x = np.array([0, 1, 2])
-# y = x**3
-# poly = lagrange(x, y)
-
-# from numpy.polynomial.polynomial import Polynomial
-# # Polynomial(poly.coef[::-1]).coef
-# import matplotlib.pyplot as plt
-# x_new = np.arange(0, 2.1, 0.1)
-# plt.scatter(x, y, label='data')
-# plt.plot(x_new, Polynomial(poly.coef[::-1])(x_new), label='Polynomial')
-# plt.plot(x_new, 3*x_new**2 - 2*x_new + 0*x_new, label=r"$3 x^2 - 2 x$", linestyle='-.')
-# plt.legend()
-# plt.show()

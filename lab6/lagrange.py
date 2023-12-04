@@ -27,7 +27,7 @@ plt.plot(x, y,label='График 1/(1+25*x^2)')
 
 
 # узлы Чебышева (x_k = cos(pi(2k-1)/2n), k = 1,...,n)
-for n in [5,10,15]:
+for n in [20,30]:
     t = np.cos(np.pi*(2*np.arange(1,n+1)-1)/(2*n))
     y = f(t)
     yint = Polynomial(scipy.interpolate.lagrange(t, y).coef[::-1])
